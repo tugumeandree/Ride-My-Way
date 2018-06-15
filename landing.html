@@ -1,0 +1,47 @@
+<!Doctype HTML>
+<html>
+
+<!-- head begin-->
+<head>
+<title>Ride-My-Way</title>
+<link rel="stylesheet" href="/css/landing.css"/>
+</head>
+<!-- head end-->
+
+<body>
+  <div class="landing-page">   
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Get Started</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Driver</a>
+    <a href="#">Passenger</a>
+  </div>
+</div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+
+</html>
