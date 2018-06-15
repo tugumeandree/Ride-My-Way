@@ -1,0 +1,51 @@
+<!Doctype HTML>
+<html>
+
+<!-- head begin-->
+<head>
+<title>Ride-My-Way</title>
+<link rel="stylesheet" href="/css/landing.css"/>
+</head>
+<!-- head end-->
+
+<body>
+  <div class="landing-page">   
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Available Rides</button>
+        <div id="myDropdown" class="dropdown-content">
+          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+          <a href="#about">BugolobiA3</a>
+          <a href="#base">muyengaB5</a>
+          <a href="#blog">KamwokyaG4</a>
+          <a href="#contact">CitySquareB3</a>
+          <a href="#custom">Wandegeya9G</a>
+        </div>
+      </div>
+</div>
+
+<script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+
+</html>
